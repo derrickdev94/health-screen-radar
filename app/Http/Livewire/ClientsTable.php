@@ -29,6 +29,10 @@ class ClientsTable extends DataTableComponent
         $this->setPrimaryKey('id');
         //->setFilterLayoutSlideDown();
 
+        $this->setTableAttributes([
+            'class' => 'w-full table-fixed',
+        ]);
+
 
     }
 
