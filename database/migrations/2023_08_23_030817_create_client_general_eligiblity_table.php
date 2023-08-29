@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('client_id')
             ->constrained()
-            ->onUpdate('cascde')
+            ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->enum('sex_at_birth',['Male','Female']);
             $table->string('client_age');
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->enum('been_on_cervical_cancer_treatment',['Yes','No']);
             $table->enum('screened_negative_of_cervical_cancer_past_tweleve_mnth',['Yes','No']);
             $table->enum('general_eligiblity_status',['eligible','ineligible']);
-            $table->timestamps()->useCurrent();
+            $table->timestamps();
         });
     }
 

@@ -4,7 +4,7 @@
     'name',
     'options'=>[[1,"Yes",'Yes'],[0,"No",'No']],
     'previewmode'=>0,
-    'required'=>true
+    'required'=>false
 ])
 @php
     $inPreview = false;
@@ -20,7 +20,7 @@
 @if ($inPreview)
     <input type="hidden" wire:model={{ str_replace(' ','_',$name)}} id={{ 'hidden-'.str_replace(' ','-',$name)}} />
 @endif
-<select wire:change="updateSelectedRisks($event.target.name,$event.target.dataset.labelv',{{$dependant}})"  wire:model={{ str_replace(' ','_',$name)}} id={{ str_replace(' ','-',$name)}} name={{ str_replace(' ','_',$name)}}
+<select wire:model={{ str_replace(' ','_',$name)}} id={{ str_replace(' ','-',$name)}} name={{ str_replace(' ','_',$name)}}
     @required($required==true) @disabled($previewmode==1)
     {!! $attributes->class([
         'w-full dark:bg-gray-900 dark:text-gray-300 mt-1 block',
@@ -29,7 +29,7 @@
     ])!!}>
     <option selected disabled>make a selection ...</option>
     @foreach ($options as $option )
-        <option data-labelv="$option[2]" title="gbjhdj" value="{{$option[1]}}">{{str_replace('_',' ',$option[1])}}</option>
+        <option value="{{$option[1]}}">{{str_replace('_',' ',$option[1])}}</option>
     @endforeach
 </select>
 

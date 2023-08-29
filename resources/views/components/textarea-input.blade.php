@@ -6,7 +6,7 @@
     'direction'=>'col',
     'labelClass'=> '',
     'previewmode'=>0,
-    'required'=>true
+    'required'=>false
 ])
 @php
     $inPreview = false;

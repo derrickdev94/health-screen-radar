@@ -3,7 +3,7 @@
     'name',
     'options'=>['Yes','No'],
     'previewmode'=>0,
-    'required'=>true
+    'required'=>false
 ])
 @php
     $inPreview = false;
@@ -29,7 +29,7 @@
     <option value="" selected disabled>make a selection ...</option>
 
     @foreach ($options as $key=>$value )
-        <option value="{{$key}}">{{str_replace('_',' ',$key)}}</option>
+        <option value="{{str_replace('_',' ',$key)}}">{{str_replace('_',' ',$key)}}</option>
     @endforeach
 </select>
 

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->enum('gender',['male','female']);
             $table->string('population_category');
             $table->string('other_population_category')->nullable();
-            $table->timestamps()->useCurrent();
+            $table->timestamps();
 
         });
     }

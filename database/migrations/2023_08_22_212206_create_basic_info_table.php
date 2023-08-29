@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('location');
             $table->string('hotspot');
             $table->date('date_of_visit');
-            $table->timestamps()->useCurrent();
+            $table->timestamps();
         });
     }
 

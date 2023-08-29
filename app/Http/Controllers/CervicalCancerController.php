@@ -3,41 +3,62 @@
 namespace App\Http\Controllers;
 
 use App\Models\CervicalCancer;
+use App\Models\BasicInfo;
+use App\Models\Client;
+use App\Models\ClientAddress;
+use App\Models\ClientGeneralEligiblity;
+use App\Models\ClientCurrentEligiblity;
+use App\Models\RiskClassification;
+use App\Models\ClientReferral;
 use Illuminate\Http\Request;
 
 class CervicalCancerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
+    public function index(){
+        return view('cervical-cancer.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-    return view('cervica-cancer.new');
+        return view('cervical-cancer.new');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function showBasicInfo(BasicInfo $basicInfo)
     {
-        //
+        return view('cervical-cancer.view-basic-info');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(CervicalCancer $cervicalCancer)
+    public function showClient(Client $client)
     {
-        //
+        return view('cervical-cancer.view-client');
     }
+
+    public function showClientAddress(ClientAddress $clientAddress)
+    {
+        return view('cervical-cancer.view-client-address');
+    }
+
+    public function showClientGeneralEligiblity(ClientGeneralEligiblity $clientGeneralEligiblity)
+    {
+        return view('cervical-cancer.view-client-general-eligiblity');
+    }
+
+    public function showClientCurrentEligiblity(ClientCurrentEligiblity $clientCurrentEligiblity)
+    {
+        return view('cervical-cancer.view-client-current-eligiblity');
+    }
+
+    public function showRiskClassification(RiskClassification $riskClassification)
+    {
+        return view('cervical-cancer.view-risk-classification');
+    }
+
+    public function showClientReferral(ClientReferral $clientReferral)
+    {
+        return view('cervical-cancer.view-client-referral');
+    }
+
+
 
     /**
      * Show the form for editing the specified resource.

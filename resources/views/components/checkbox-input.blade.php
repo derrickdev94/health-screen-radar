@@ -4,7 +4,7 @@
     'value',
     'type'=>'checkbox',
     'previewmode'=>0,
-    'required'=>true,
+    'required'=>false,
     'keyindex'=>1
 ])
 
@@ -30,7 +30,7 @@
         @isset($value) value="{{$value}}" @endif
         id={{ $keyindex.'-'.str_replace(' ', '-', $name)}}
         name={{ str_replace(' ','_',$name)}}
-        @readonly($previewmode==1) @required($required==true) @disabled($inPreview)
+        @readonly($previewmode==1) @required($required==true) @disabled($previewmode ==1)
         {!! $attributes->class([
             'w-4 h-4 border-gray-300 dark:border-gray-700 dark:bg-gray-900',
             'dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600',

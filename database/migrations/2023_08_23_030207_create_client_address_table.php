@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('parish');
             $table->string('village');
             $table->string('zone');
-            $table->timestamps()->useCurrent();
+            $table->timestamps();
         });
     }
 

@@ -3,7 +3,7 @@
     'name',
     'options'=>['Yes','No'],
     'previewmode'=>0,
-    'required'=>true
+    'required'=>false
 ])
 @php
     $inPreview = false;

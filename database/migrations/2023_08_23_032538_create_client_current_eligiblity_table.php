@@ -15,17 +15,17 @@ return new class extends Migration
             $table->id();
             $table->foreignId('client_id')
             ->constrained()
-            ->onUpdate('cascde')
+            ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->enum('currently_menstruating',['Yes','No']);
-            $table->text('currently_menstruating_comment');
-            $table->string('days_since_last_menstruation_period');
+            $table->text('currently_menstruating_comment')->nullable();
+            $table->string('days_since_last_menstruation_period')->nullable();;
             $table->text('last_menstruation_period_comment')->nullable();
             $table->enum('currently_pregnant_or_been_past_three_mnth',['Yes','No','null'])->nullable();
             $table->text('currently_pregnant_or_been_past_three_mnth_comment')->nullable();
             $table->json('symptoms_indicating_advanced_illness')->nullable();
             $table->enum('current_eligiblity_status',['eligible','ineligible']);
-            $table->timestamps()->useCurrent();
+            $table->timestamps();
         });
     }
 
