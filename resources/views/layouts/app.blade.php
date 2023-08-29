@@ -22,7 +22,7 @@
 </head>
 
 <body class="font-sans antialiased h-full">
-    <div x-data class="w-full overflow-x-hidden min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div x-data class="w-full min-h-screen bg-gray-100 dark:bg-gray-900">
         <!-- Page Content -->
         <main class="w-full h-full">
             @if(isset($side_panel))
