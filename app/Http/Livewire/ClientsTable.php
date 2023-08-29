@@ -18,7 +18,7 @@ class ClientsTable extends DataTableComponent
 
     public function deleteSelected(){
         foreach($this->getSelected() as $item){
-
+            Client::destroy($item);
             $this->clearSelected();
         }
 

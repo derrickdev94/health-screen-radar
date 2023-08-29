@@ -12,17 +12,17 @@ class ClientGeneralEligiblityTable extends DataTableComponent
 {
     protected $model = ClientGeneralEligiblity::class;
 
-    public array $bulkActions  = [
-        'deleteSelected' => 'Delete'
-    ];
+    // public array $bulkActions  = [
+    //     'deleteSelected' => 'Delete'
+    // ];
 
-    public function deleteSelected(){
-        foreach($this->getSelected() as $item){
+    // public function deleteSelected(){
+    //     foreach($this->getSelected() as $item){
 
-            $this->clearSelected();
-        }
+    //         $this->clearSelected();
+    //     }
+    // }
 
-    }
     public function configure(): void
     {
         $this->setPrimaryKey('id');
