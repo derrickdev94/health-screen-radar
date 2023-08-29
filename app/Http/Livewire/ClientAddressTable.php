@@ -27,6 +27,9 @@ class ClientAddressTable extends DataTableComponent
     {
         $this->setPrimaryKey('id');
         //->setFilterLayoutSlideDown();
+        $this->setComponentWrapperAttributes([
+            'class' => 'w-full',
+          ]);
     }
 
     public function columns(): array
