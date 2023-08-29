@@ -8,7 +8,7 @@
                 <livewire:reactive-header />
             </div>
             <div class="flex justify-end gap-2 md:gap-3 grow md:grow-0">
-                <x-primary-blue-button type="submit">
+                <x-primary-blue-button :previewMode="$previewMode"  type="submit">
                     <x-icons.document size="4" />
                     Save
                 </x-primary-blue-button>

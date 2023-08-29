@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('number_of_sexual_partners_past_six_month');
             $table->enum('regular_sexual_intercourse_without_condom',['Yes','No']);
             $table->enum('hiv_status',['Positive','Negative','Unsure']);
-            $table->enum('compliant_with_hiv_medication',['Compliant','Not compliant']); //->nullable();
+            $table->enum('compliant_with_hiv_medication',['Compliant','Not compliant'])->nullable();
             $table->enum('smoke_cigarettes',['Yes','No']);
             $table->enum('ever_been_diagonosed_with_stds',['Yes','No']);
             $table->text('number_of_pregnancies');
