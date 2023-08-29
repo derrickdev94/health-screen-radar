@@ -315,7 +315,7 @@ class NewCervicalScreening extends Component
             $client->clientGeneralEligiblity()->create($validGeneralData);
             $client->riskClassification()->create($validRiskData);
             $client->clientReferral()->create($validReferralData);
-           // return redirect()->route('cervicalCancer.clientInfo');
+            return redirect()->route('cervicalCancer.clientInfo');
 
         }catch(ValidationException $e){
             session()->flash('invalid_bio_form',true);
