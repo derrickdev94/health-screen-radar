@@ -85,8 +85,8 @@
                 </div>
             </div>
         </div>
-        <div class="rounded-md mt-10 py-12 h-32 col-span-4 bg-white outline-2 outline-gray-300 shadow-md">
-            More analtics
+        <div class="rounded-md mt-10 text-center py-12 h-32 col-span-4 bg-white outline-2 outline-gray-300 shadow-md">
+            More analytics
         </div>
     </div>
 </x-content-layout>
