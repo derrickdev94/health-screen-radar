@@ -21,43 +21,43 @@
                     <li class="my-2">
                         <x-responsive-nav-link :href="route('cervicalCancer.basicInfo')"
                             :active="request()->routeIs('cervicalCancer.basicInfo')">
-                            {{ __('BASIC INFO') }}
+                            {{ __('View Basic Info') }}
                         </x-responsive-nav-link>
                     </li>
                     <li class="my-2">
                         <x-responsive-nav-link :href="route('cervicalCancer.clientInfo')"
                             :active="request()->routeIs('cervicalCancer.clientInfo')">
-                            {{ __('CLIENT INFO') }}
+                            {{ __('View Client Info') }}
                         </x-responsive-nav-link>
                     </li>
                     <li class="my-2">
                         <x-responsive-nav-link :href="route('cervicalCancer.clientAddress')"
                             :active="request()->routeIs('cervicalCancer.clientAddress')">
-                            {{ __('CLIENT ADDRESS') }}
+                            {{ __('Viw Client Address') }}
                         </x-responsive-nav-link>
                     </li>
                     <li class="my-2">
                         <x-responsive-nav-link :href="route('cervicalCancer.clientGeneralEligiblity')"
                             :active="request()->routeIs('cervicalCancer.clientGeneralEligiblity')">
-                            {{ __('GENERAL ELIGIBLITY') }}
+                            {{ __('View General Eligiblity') }}
                         </x-responsive-nav-link>
                     </li>
                     <li class="my-2">
                         <x-responsive-nav-link :href="route('cervicalCancer.clientCurrentEligiblity')"
                             :active="request()->routeIs('cervicalCancer.clientCurrentEligiblity')">
-                            {{ __('CURRENT ELIGIBLITY') }}
+                            {{ __('View Current Eligiblity') }}
                         </x-responsive-nav-link>
                     </li>
                     <li class="my-2">
                         <x-responsive-nav-link :href="route('cervicalCancer.riskClassification')"
                             :active="request()->routeIs('cervicalCancer.riskClassification')">
-                            {{ __('CLIENT RISK ANALYSIS') }}
+                            {{ __('View Client Risk Analysis') }}
                         </x-responsive-nav-link>
                     </li>
                     <li class="my-2">
                         <x-responsive-nav-link :href="route('cervicalCancer.clientReferral')"
                             :active="request()->routeIs('cervicalCancer.clientReferral')">
-                            {{ __('CLIENT REFRRALS') }}
+                            {{ __('View Client Referrals') }}
                         </x-responsive-nav-link>
                     </li>
 

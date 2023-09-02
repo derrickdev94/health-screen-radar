@@ -12,9 +12,9 @@ class BasicInfoTable extends DataTableComponent
 {
     protected $model = BasicInfo::class;
 
-    public array $bulkActions  = [
-        'deleteSelected' => 'Delete'
-    ];
+    // public array $bulkActions  = [
+    //     'deleteSelected' => 'Delete'
+    // ];
 
     // public function deleteSelected(){
     //     foreach($this->getSelected() as $item){
