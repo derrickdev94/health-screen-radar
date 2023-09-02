@@ -12,7 +12,7 @@
                             Total clients
                         </h1>
                     </div>
-                    <div class="flex justify-center gap-3 items-center">
+                    <div class="flex justify-center gap-3 items-center py-7">
                         <div class="flex flex-col text-gray-700 items-center ">
                             <p class="gap-3 text-3xl font-extrabold">
                                 500
