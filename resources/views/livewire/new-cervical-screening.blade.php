@@ -8,11 +8,11 @@
                 <livewire:reactive-header />
             </div>
             <div class="flex justify-end gap-2 md:gap-3 grow md:grow-0">
-                <x-primary-blue-button :previewMode="$previewMode"  type="submit">
+                <x-primary-blue-button class=" disabled:bg-blue-400" :previewMode="$previewMode"  type="submit">
                     <x-icons.document size="4" />
                     Save
                 </x-primary-blue-button>
-                <x-danger-button type="button" class="">
+                <x-danger-button disabled class="disabled:bg-red-400" type="button" >
                     <x-icons.trash size="4" />
                     delete
                 </x-danger-button>

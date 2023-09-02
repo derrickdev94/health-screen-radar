@@ -64,20 +64,7 @@ class ClientsTable extends DataTableComponent
             // ->sortable()
             // ->collapseOnMobile(),
             //Column::make("Updated at", "updated_at")->sortable(),
-            Column::make("SD")
-            ->label(
-                fn($row,Column $column)=>'fggg'
-            )->html(),
 
-            Column::make("SD")
-            ->label(
-                fn($row,Column $column)=>'
-                <x-primary-blue-button type="button">
-                    <x-icons.document size="4" />
-                    Save
-                </x-primary-blue-button>
-                '
-            )->html(),
 
             ButtonGroupColumn::make('Actions')
             ->attributes(function($row){
@@ -87,14 +74,13 @@ class ClientsTable extends DataTableComponent
             })
             ->buttons([
                 LinkColumn::make('View')
-                ->title(fn($row)=> '<button>View'.$row->id. '</button>')
-                ->location(fn($row)=> route('cervicalCancer.index')),
-
-                // ->attributes(function($row){
-                //     return [
-                //         'class' =>'border-2 rounded-md p-1 bg-blue-500 dark:bg-blue-900 text-orange-500 hover:bg-blue-600'
-                //     ];
-                // }),
+                ->title(fn($row)=> 'View')
+                ->location(fn($row)=> route('cervicalCancer.index'))
+                ->attributes(function($row){
+                    return [
+                        'class' =>'underline text-blue-500 hover:no-underline'
+                    ];
+                }),
                 LinkColumn::make('Edit')
                 ->title(fn($row)=> 'Edit'.$row->name)
                 ->location(fn($row)=> route('cervicalCancer.index'))
