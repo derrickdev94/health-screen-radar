@@ -3,19 +3,21 @@
     $messages = [''];
     @endphp
     <x-form id="screen-form" x-ref="screeningForm" direction='col' wire:submit.prevent="handleSave()">
-        <div class="flex flex-wrap gap-3 px-2 py-1 sticky top-16 bg-gray-100 ">
-            <div class="grow">
-                <livewire:reactive-header />
-            </div>
-            <div class="flex justify-end gap-2 md:gap-3 grow md:grow-0">
-                <x-primary-blue-button class=" disabled:bg-blue-400" :previewMode="$previewMode"  type="submit">
-                    <x-icons.document size="4" />
-                    Save
-                </x-primary-blue-button>
-                <x-danger-button disabled class="disabled:bg-red-400" type="button" >
-                    <x-icons.trash size="4" />
-                    delete
-                </x-danger-button>
+        <div class=" bg-orange-500 px-1 sticky top-16">
+            <div class="flex flex-wrap gap-3 mb-1 pb-1 pt-0.5 px-1 rounded-b-md bg-gray-200">
+                <div class="grow ">
+                    <livewire:reactive-header />
+                </div>
+                <div class="flex justify-end gap-2 md:gap-3 grow md:grow-0">
+                    <x-primary-blue-button class=" disabled:bg-blue-400" :previewMode="$previewMode" type="submit">
+                        <x-icons.document size="4" />
+                        Save
+                    </x-primary-blue-button>
+                    <x-danger-button disabled class="disabled:bg-red-400" type="button">
+                        <x-icons.trash size="4" />
+                        delete
+                    </x-danger-button>
+                </div>
             </div>
         </div>
         <div class="p-1 md:p-6">
@@ -585,8 +587,8 @@
                                 <div class="flex flex-col w-full">
                                     <x-select-input3
                                         wire:change="updateSelectedRisks($event.target.value,$event.target.name)"
-                                        :previewmode="$previewMode" name="ever been diagonosed with stds" required="true"
-                                        :options="$with_stds" />
+                                        :previewmode="$previewMode" name="ever been diagonosed with stds"
+                                        required="true" :options="$with_stds" />
                                     @error('ever been_diagonosed_with_stds')
                                     <x-input-single-error :message="$message" />
                                     @enderror

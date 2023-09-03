@@ -1,6 +1,8 @@
 <x-content-layout>
     <x-slot name="sub_header_two">
-        <div class=" grow py-2.5 px-2 bg-gray-100">Dashboard</div>
+        <div class="bg-gray-200 dark:bg-gray-900 grow py-2 mb-1 rounded-bl-md rounded-br-md uppercase font-bold px-2">
+            Dashboard
+        </div>
     </x-slot>
     <div class="container p-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">

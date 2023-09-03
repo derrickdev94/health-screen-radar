@@ -17,7 +17,9 @@
     <script></script>
     @livewireStyles()
     <style>
-        [x-cloak] { display: none !important; }
+        [x-cloak] {
+            display: none !important;
+        }
     </style>
 </head>
 
@@ -27,8 +29,8 @@
         <main class="w-full h-full">
             @if(isset($side_panel))
             <div class="h-screen hidden md:block
-                    fixed left-0 top-0 bottom-0
-                    w-[23%] overscroll-contain">
+                fixed left-0 top-0 bottom-0
+                w-[23%] overscroll-contain">
                 <div>
                     <div class="flex shrink-0 justify-center items-center bg-white dark:bg-gray-900">
                         <a href="{{ route('dashboard') }}">
@@ -92,7 +94,7 @@
                             @include('layouts.navigation')
                             <!-- Page Heading -->
                             <header
-                                class="flex items-center grow px-1 bg-white text-gray-900 dark:text-gray-100 dark:bg-gray-800 shadow">
+                                class="flex items-center grow px-1 bg-orange-500 text-gray-900 dark:text-gray-100 dark:bg-gray-800 shadow">
                                 <div class=" md:hidden">
                                     @if (isset($sub_header_one))
                                     {{ $sub_header_one }}
