@@ -13,8 +13,5 @@ export default defineConfig({
     ],
     server:{
         host: true,
-        hmr: {
-            host: 'cancertool.acceltechonosoft.com'
-        }
     }
 });
