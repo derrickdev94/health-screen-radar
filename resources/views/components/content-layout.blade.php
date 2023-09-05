@@ -65,8 +65,6 @@
             </div>
         </x-slot>
     </x-slot>
-
-
     <x-slot name="sub_header_two">
         <div class="flex grow gap-2 flex-wrap items-center">
             @if (isset($sub_header_two))

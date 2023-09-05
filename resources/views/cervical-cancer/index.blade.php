@@ -91,4 +91,5 @@
             More analytics
         </div>
     </div>
+
 </x-content-layout>
