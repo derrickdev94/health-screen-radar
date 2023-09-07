@@ -158,9 +158,17 @@ class NewCervicalScreening extends Component
     public $no_referral_option_comment;
 
     public $eligiblity_status = array(
-        'type'=>'Unknown',
-        'statusText'=>"Elgiblity",
-        'status'=>false
+        'general'=>array(
+            'type'=>'General Eligiblity',
+            'statusText'=>"Ineligible",
+            'status'=>false
+        ),
+        'current'=>array(
+            'type'=>'Current Eligiblity',
+            'statusText'=>"Ineligible",
+            'status'=>false
+        )
+
     );
 
     protected $bioRules = [
@@ -342,7 +350,6 @@ class NewCervicalScreening extends Component
     public function updated($dic_name){
         $this->validateOnly($dic_name);
     }
-
 
     public function validateForms(){
         if ($this->current_form_step == $this->total_form_steps){
@@ -575,33 +582,45 @@ class NewCervicalScreening extends Component
         in_array($this->had_total_hysterectomy,$this->general_eligiblity_true) &&
         in_array($this->screened_negative_of_cervical_cancer_past_tweleve_mnth,$this->general_eligiblity_true)
         ){
-            $this->eligiblity_status['type'] = 'general eligiblity';
-            $this->eligiblity_status['statusText'] = 'eligible';
-            $this->eligiblity_status['status'] = true;
-            $this->emit('updateEligiblityStatus',$this->eligiblity_status);
+            $this->eligiblity_status['general'] =
+            [
+                'type' => 'General eligibility',
+                'statusText' => 'eligible',
+                'status' => true
+            ];
             $this->general_eligiblity_status = 'eligible';
         }else{
-            $this->eligiblity_status['type'] = 'general eligiblity';
-            $this->eligiblity_status['statusText'] = 'ineligible';
-            $this->eligiblity_status['status'] = false;
+            $this->eligiblity_status['general'] =
+            [
+                'type' => 'General eligibility',
+                'statusText' => 'ineligible',
+                'status' => false
+            ];
             $this->general_eligiblity_status = 'ineligible';
 
             $this->emit('updateEligiblityStatus',$this->eligiblity_status);
         }
+        $this->emit('updateEligiblityStatus',$this->eligiblity_status);
     }
 
     public function determineCurrentEligiblity(){
         if(in_array($this->currently_menstruating,$this->current_eligiblity_true) &&
         in_array($this->days_since_last_menstruation_period,$this->current_eligiblity_true) &&
         in_array($this->currently_pregnant_or_been_past_three_mnth,$this->current_eligiblity_true)){
-            $this->eligiblity_status['type'] = 'current eligiblity';
-            $this->eligiblity_status['statusText'] = 'eligible';
-            $this->eligiblity_status['status'] = true;
+            $this->eligiblity_status['current'] =
+            [
+                'type' => 'Current eligibility',
+                'statusText' => 'eligible',
+                'status' => true
+            ];
             $this->current_eligiblity_status = 'eligible';
         }else{
-            $this->eligiblity_status['type'] = 'current eligiblity';
-            $this->eligiblity_status['statusText'] = 'ineligible';
-            $this->eligiblity_status['status'] = false;
+            $this->eligiblity_status['current'] =
+            [
+                'type' => 'Current eligibility',
+                'statusText' => 'ineligible',
+                'status' => false
+            ];
             $this->current_eligiblity_status = 'ineligible';
         }
         $this->emit('updateEligiblityStatus',$this->eligiblity_status);

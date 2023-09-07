@@ -7,9 +7,19 @@ use Livewire\Component;
 class ReactiveHeader extends Component
 {
     public $riskScore = 0;
-    public $eligiblityStatus=[
-        'status'=>false
-    ];
+    public $eligiblityStatus = array(
+        'general'=>array(
+            'type'=>'General Eligiblity',
+            'statusText'=>"Ineligible",
+            'status'=>false
+        ),
+        'current'=>array(
+            'type'=>'Current Eligiblity',
+            'statusText'=>"Ineligible",
+            'status'=>false
+        )
+
+    );
     protected $listeners = ['riskScoreChanged','updateEligiblityStatus'];
 
     public function riskScoreChanged($newScore){

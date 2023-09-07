@@ -4,7 +4,7 @@
     @endphp
     <x-form id="screen-form" x-ref="screeningForm" direction='col' wire:submit.prevent="handleSave()">
         <div class=" bg-orange-500 px-1 sticky top-16">
-            <div class="flex flex-wrap gap-3 mb-1 pb-1 pt-0.5 px-1 rounded-b-md bg-gray-200">
+            <div class="flex items-center flex-wrap gap-3 mb-1 py-[0.21rem] px-1 rounded-b-md bg-gray-200">
                 <div class="grow ">
                     <livewire:reactive-header />
                 </div>

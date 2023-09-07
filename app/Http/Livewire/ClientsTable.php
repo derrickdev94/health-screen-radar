@@ -75,7 +75,7 @@ class ClientsTable extends DataTableComponent
             ->buttons([
                 LinkColumn::make('View')
                 ->title(fn($row)=> 'View')
-                ->location(fn($row)=> route('cervicalCancer.index'))
+                ->location(fn($row)=> route('cervicalCancer.create',$row->id))
                 ->attributes(function($row){
                     return [
                         'class' =>'underline text-blue-500 hover:no-underline'
