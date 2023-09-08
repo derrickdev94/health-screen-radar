@@ -21,7 +21,7 @@
                             </p>
                             <em class="text-gray-600 text-sm">screened clients</em>
                         </div>
-                        <x-icons.arrow-circle-up class="text-gray-200 bg-gray-500 rounded-md animate-pulse" size="8" />
+                        <x-icons.arrow-circle-up class="text-gray-200  bg-gray-500 rounded-md animate-pulse" size="7" />
                     </div>
                     <div class="border-2 rounded-b-md border-gray-500"> </div>
                 </div>
@@ -41,7 +41,7 @@
                             </p>
                             <em class="text-gray-600 text-sm">of screened clients</em>
                         </div>
-                        <x-icons.arrow-circle-up class="text-red-200 bg-red-500 rounded-md animate-pulse" size="8" />
+                        <x-icons.arrow-circle-up class="text-red-200 bg-red-500 rounded-md animate-pulse" size="7" />
                     </div>
                     <div class="border-2 rounded-b-md border-red-500"> </div>
                 </div>
@@ -61,7 +61,7 @@
                             </p>
                             <em class="text-gray-600 text-sm">of screened clients</em>
                         </div>
-                        <x-icons.arrow-circle-up class="text-orange-200 bg-orange-500 rounded-md animate-pulse" size="8" />
+                        <x-icons.arrow-circle-up class="text-orange-200 bg-orange-500 rounded-md animate-pulse" size="7" />
                     </div>
                     <div class="border-2 rounded-b-md border-orange-500"> </div>
                 </div>
@@ -81,7 +81,7 @@
                             </p>
                             <em class="text-gray-600 text-sm">of screened clients</em>
                         </div>
-                        <x-icons.arrow-circle-up class="text-green-200 bg-green-500 rounded-md animate-pulse" size="8" />
+                        <x-icons.arrow-circle-up class="text-green-200 bg-green-500 rounded-md animate-pulse" size="7" />
                     </div>
                     <div class="border-2 rounded-b-md border-green-500"> </div>
                 </div>
