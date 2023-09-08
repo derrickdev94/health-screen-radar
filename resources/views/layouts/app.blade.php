@@ -14,7 +14,13 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script></script>
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+            } else {
+            document.documentElement.classList.remove('dark')
+            }
+    </script>
     @livewireStyles()
     <style>
         [x-cloak] {
@@ -30,15 +36,15 @@
             @if(isset($side_panel))
             <div class="h-screen hidden md:block
                 fixed left-0 top-0 bottom-0
-                w-[23%] overscroll-contain">
-                <div>
-                    <div class="flex shrink-0 justify-center items-center bg-white dark:bg-gray-900">
-                        <a href="{{ route('dashboard') }}">
-                            <x-application-logo
-                                class="block h-[106px] w-24 fill-current text-gray-800 dark:text-gray-200" />
-                        </a>
-                    </div>
+                w-[23%] overscroll-contain dark:bg-gray-900">
+
+                <div class="flex shrink-0 justify-center items-center bg-white dark:bg-gray-900">
+                    <a href="{{ route('homepage') }}">
+                        <x-application-logo
+                            class="block h-[106px] w-24 fill-current  text-gray-800 dark:text-gray-200" />
+                    </a>
                 </div>
+
                 <div class="h-screen overflow-y-auto">
                     @if (isset($side_panel_content))
                     {{ $side_panel_content}}
@@ -56,7 +62,7 @@
                             @include('layouts.navigation')
                             <!-- Page Heading -->
                             <header
-                                class="flex items-center grow px-1 bg-orange-500 text-gray-900 dark:text-gray-100 dark:bg-gray-800 shadow">
+                                class="flex items-center grow px-1 bg-orange-500 dark:bg-orange-500 text-gray-900 dark:text-gray-100 shadow">
                                 <div class=" md:hidden">
                                     @if (isset($sub_header_one))
                                     {{ $sub_header_one }}
@@ -83,7 +89,7 @@
                 <div class="sticky top-0 z-10">
                     <div class="flex flex-wrap">
                         <!-- Extra logo -->
-                        <div class="flex items-center pl-6 bg-white justify-center">
+                        <div class="flex items-center pl-6 bg-white dark:bg-gray-900 justify-center">
                             <a href="{{ route('homepage') }}">
                                 <x-application-logo
                                     class="block h-[106px] w-24 fill-current text-gray-800 dark:text-gray-200" />
@@ -94,7 +100,7 @@
                             @include('layouts.navigation')
                             <!-- Page Heading -->
                             <header
-                                class="flex items-center grow px-1 bg-orange-500 text-gray-900 dark:text-gray-100 dark:bg-gray-800 shadow">
+                                class="flex items-center grow px-1 bg-orange-500 dark:bg-orange-500 text-gray-900 dark:text-gray-100 shadow">
                                 <div class=" md:hidden">
                                     @if (isset($sub_header_one))
                                     {{ $sub_header_one }}
@@ -119,10 +125,10 @@
         </main>
     </div>
     @livewireScripts()
-     <!--CHART JS SCRIPTS -->
-     @push('scripts')
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-     @endpush
+    <!--CHART JS SCRIPTS -->
+    @push('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    @endpush
 </body>
 
 </html>

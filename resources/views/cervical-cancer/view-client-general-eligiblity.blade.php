@@ -4,7 +4,7 @@
             client cervical cancer general eligiblity
         </div>
     </x-slot>
-    <div class="container">
+    <div class="container p-2">
         <livewire:client-general-eligiblity-table />
     </div>
 </x-content-layout>

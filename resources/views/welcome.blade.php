@@ -35,7 +35,7 @@
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center">
                     <div class="flex md:hidden shrink-0  items-center justify-start">
-                        <a href="{{ route('dashboard') }}">
+                        <a href="{{ route('homepage') }}">
                             <x-application-logo class="block h-16 w-24 fill-current text-gray-800 dark:text-gray-200" />
                         </a>
                     </div>

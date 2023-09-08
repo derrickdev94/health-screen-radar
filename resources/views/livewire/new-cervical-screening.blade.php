@@ -1,11 +1,11 @@
-<div class="bg-white dark:bg-gray-800 shadow-sm sm:rounded-lg">
-    <div class="bg-gray-100">
+<div class="bg-white  shadow-sm sm:rounded-lg">
+    <div class="bg-gray-100 dark:bg-gray-900">
         @php
         $messages = [''];
         @endphp
         <x-form id="screen-form" x-ref="screeningForm" direction='col' wire:submit.prevent="createOrUpdate()">
-            <div class=" bg-orange-500 px-1 sticky top-16">
-                <div class="flex items-center flex-wrap gap-3 mb-1 py-[0.21rem] px-1 rounded-b-md bg-gray-200">
+            <div class=" bg-orange-500  px-1 sticky top-16">
+                <div class="flex items-center flex-wrap gap-3 mb-1 py-[0.21rem] px-1 rounded-b-md bg-gray-200 dark:bg-gray-900">
                     <div class="grow ">
                         <livewire:reactive-header />
                     </div>
@@ -31,17 +31,17 @@
             </div>
             <div class="p-1 md:p-6">
                 <div class="bg-white dark:bg-gray-800 p-1 md:p-6 shadow-sm sm:rounded-lg">
-                    <div class=" {{ $previewMode == 1 ? 'border-2 border-red-400 rounded-md' : '' }}">
+                    <div class="dark:border-0 {{ $previewMode == 1 ? 'border-2 border-red-400 dark:border-gray-700 rounded-md' : '' }}">
 
                         @if ($current_form_step == 1 || session()->has('invalid_basic_form') || $formState=='new' && $previewMode == 1 || $formState=='view' && !empty($currentFormName) && $currentFormName == 'basic_form' && $previewMode == 1 ||
                         !empty($currentFormName) && $currentFormName == 'basic_form')
                         <div name="basic_info" id="basic-info"
-                            class="p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
+                            class="p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400 dark:bg-gray-800' : '' }}">
                             <div
-                                class="text-center text-lg font-semibold uppercase {{ $previewMode == 1 ? 'text-white py-2 align-middle' : '' }}">
+                                class="text-center dark:text-white text-lg font-semibold uppercase {{ $previewMode == 1 ? 'text-white dark:text-white py-2 align-middle' : '' }}">
                                 Basic information
                             </div>
-                            <div class="px-3 {{ $previewMode == 1 ? 'rounded-2xl border-red-400 bg-white' : '' }}">
+                            <div class="dark:bg-gray-800 px-3 {{ $previewMode == 1 ? 'rounded-2xl dark:py-2 border-red-400 dark:border-gray-700 bg-white' : '' }}">
 
                                 <div class="flex flex-col md:flex-row gap-0 md:gap-2 my-2 items-center">
                                     <x-input-label labelfor="dic name" labelvalue="DIC Name" class="w-full md:w-3/12" />
@@ -91,12 +91,12 @@
                         @if ($current_form_step == 2 || session()->has('invalid_bio_form') || $formState=='new' && $previewMode == 1 || $formState=='view' && !empty($currentFormName) && $currentFormName == 'bio_form' && $previewMode == 1 ||
                         !empty($currentFormName) && $currentFormName == 'bio_form')
                         <div name="bio_info" id="bio-info"
-                            class="p-0 m-0 {{ $previewMode == 0 ? 'pb-8' : '' }} transition-all {{ $previewMode == 1 ? 'bg-red-400 py-0' : '' }}">
+                            class="p-0 m-0 {{ $previewMode == 0 ? 'pb-8' : '' }} transition-all {{ $previewMode == 1 ? 'bg-red-400 dark:bg-gray-800 py-0' : '' }}">
                             <div
-                                class="text-center text-lg font-semibold uppercase {{ $previewMode == 1 ? 'text-white py-2 align-middle' : '' }}">
-                                <p>client bio data</p>
+                                class="text-center dark:text-white text-lg font-semibold uppercase {{ $previewMode == 1 ? 'text-white py-2 align-middle' : '' }}">
+                                client bio data
                             </div>
-                            <div class="px-3 {{ $previewMode == 1 ? 'rounded-2xl border-red-400 bg-white' : '' }}">
+                            <div class="px-3 dark:bg-gray-800 {{ $previewMode == 1 ? 'rounded-2xl border-red-400 bg-white' : '' }}">
 
                                 <div class="flex flex-col md:flex-row gap-0 md:gap-2 my-2 items-center">
                                     <x-input-label labelfor="client name" labelvalue="client name"
@@ -197,12 +197,12 @@
                         @if ($current_form_step == 3 || session()->has('invalid_address_form') || $formState=='new' && $previewMode == 1 ||
                         !empty($currentFormName) && $currentFormName == 'address_form')
                         <div name="address_info" id="address-info"
-                            class="p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
+                            class="dark:bg-gray-800 p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
                             <div
-                                class="text-center text-lg font-semibold uppercase {{ $previewMode == 1 ? 'text-white py-2 align-middle' : '' }}">
+                                class="text-center dark:text-white text-lg font-semibold uppercase {{ $previewMode == 1 ? 'text-white py-2 align-middle' : '' }}">
                                 client address
                             </div>
-                            <div class="px-3 {{ $previewMode == 1 ? 'rounded-2xl border-red-400 bg-white' : '' }}">
+                            <div class="px-3 dark:bg-gray-800 {{ $previewMode == 1 ? 'rounded-2xl border-red-400 bg-white' : '' }}">
                                 <div class="flex flex-col md:flex-row gap-0 md:gap-2 my-2 items-center">
                                     <x-input-label labelfor="district" labelvalue="district" class="w-full md:w-3/12" />
                                     <div class="flex flex-col w-full">
@@ -271,12 +271,12 @@
                         @if ($current_form_step == 4 || session()->has('invalid_general_eligiblity_form') ||
                         $formState=='new' && $previewMode == 1 || !empty($currentFormName) && $currentFormName == 'general_form')
                         <div name="eligibility_criteria" id="eligiblity-criteria"
-                            class="p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
+                            class="dark:bg-gray-800 p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
                             <div
-                                class="text-center text-lg font-semibold uppercase {{ $previewMode == 1 ? 'text-white py-2 align-middle' : '' }}">
+                                class="text-center dark:text-white text-lg font-semibold uppercase {{ $previewMode == 1 ? 'text-white py-2 align-middle' : '' }}">
                                 general eligibility criteria
                             </div>
-                            <div class="px-3 {{ $previewMode == 1 ? 'rounded-2xl border-red-400 bg-white' : '' }}">
+                            <div class="px-3 dark:bg-gray-800 {{ $previewMode == 1 ? 'rounded-2xl border-red-400 bg-white' : '' }}">
                                 <div class="flex flex-col">
                                     <div class="flex flex-col md:flex-row gap-0 md:gap-2 my-2 items-center">
                                         <x-input-label labelfor="sex at birth" labelvalue="what was your sex at birth?"
@@ -366,13 +366,13 @@
                         @if ($current_form_step == 5 || session()->has('invalid_current_eligiblity_form') ||
                         $formState=='new' && $previewMode == 1 || !empty($currentFormName) && $currentFormName == 'current_form')
                         <div name="eligibility_confirmation" id="eligibility-confirmation"
-                            class="p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
-                            <div class="text-center text-lg font-semibold uppercase
+                            class="dark:bg-gray-800 p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
+                            <div class="text-center dark:text-white text-lg font-semibold uppercase
                          {{ $previewMode == 1 ? 'text-white py-2 align-middle' : '' }}">
                                 current eligibility criteria
                             </div>
                             <div
-                                class="px-3 {{ $previewMode == 1 ? 'rounded-2xl rounded-bl-none rounded-br-none border-red-400 bg-white' : '' }}">
+                                class="dark:bg-gray-800  dark:text-white px-3 {{ $previewMode == 1 ? 'rounded-2xl rounded-bl-none rounded-br-none border-red-400 bg-white' : '' }}">
                                 <div class="flex flex-col md:flex-row gap-0 md:gap-2 my-2 items-center">
                                     <x-input-label labelfor="currently menstruating"
                                         labelvalue="are you currently menstruating?" class="w-full md:w-9/12" />
@@ -445,9 +445,9 @@
                         @if ($current_form_step == 6 || $formState=='new' && $previewMode == 1 || !empty($currentFormName) &&
                         $currentFormName == 'current_form')
                         <div name="symptoms_indicating_advanced_illness" id="advanced-illness-symptoms"
-                            class="p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
+                            class="dark:bg-gray-800 p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
                             <div
-                                class="px-3 {{ $previewMode == 1 ? 'rounded-2xl rounded-tl-none rounded-tr-none pt-2 border-red-400 bg-white' : '' }}">
+                                class="dark:bg-gray-800 dark:text-gray-200 px-3 {{ $previewMode == 1 ? 'rounded-2xl rounded-tl-none rounded-tr-none pt-2 border-red-400 bg-white' : '' }}">
                                 <p>
                                     The following symptoms may indicate advanced illness or
                                     other conditions and should be reported to your clinician:
@@ -494,12 +494,12 @@
                         @if ($current_form_step == 7 || session()->has('invalid_riskclassification_form') ||
                         $formState=='new' && $previewMode == 1 || !empty($currentFormName) && $currentFormName == 'risk_form')
                         <div name="risk_clarification" id="risk-clarification"
-                            class="p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
-                            <div class="text-center text-lg font-semibold uppercase
+                            class="dark:bg-gray-800 p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
+                            <div class="text-center dark:text-white text-lg font-semibold uppercase
                             {{ $previewMode == 1 ? 'text-white py-2 align-middle' : '' }}">
                                 risk classification
                             </div>
-                            <div class="px-3 {{ $previewMode == 1 ? 'rounded-2xl pt-2 border-red-400 bg-white' : '' }}">
+                            <div class="dark:bg-gray-800 px-3 {{ $previewMode == 1 ? 'rounded-2xl pt-2 border-red-400 bg-white' : '' }}">
                                 <div class="flex flex-col md:flex-row gap-0 md:gap-2 my-2 items-center">
                                     <x-input-label labelfor="first age of sexual intercourse"
                                         labelvalue="At what age did you have sexual intercourse for the first time?"
@@ -649,7 +649,7 @@
                                     </div>
                                 </div>
 
-                                <div>
+                                <div class="dark:text-gray-200">
                                     <p>Do you currently have any of the following symptoms:</p>
                                     <div class="flex flex-col gap-1 pt-3 pl-6 pb-3">
                                         @foreach ($possession_of_these_symptoms as $symptom_possessed)
@@ -668,12 +668,12 @@
                         @if ($current_form_step == 8 || session()->has('invalid_referral_form') || $formState=='new' && $previewMode == 1 ||
                         !empty($currentFormName) && $currentFormName == 'referral_form')
                         <div name="client_referral" id="client-referral"
-                            class="p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
-                            <div class="text-center text-lg font-semibold uppercase
+                            class="dark:bg-gray-800 p-0 m-0 transition-all {{ $previewMode == 1 ? 'bg-red-400' : '' }}">
+                            <div class="text-center dark:text-white text-lg font-semibold uppercase
                             {{ $previewMode == 1 ? 'text-white py-2 align-middle' : '' }}">
                                 client referral
                             </div>
-                            <div class="px-3 {{ $previewMode == 1 ? 'rounded-2xl pt-2 border-red-400 bg-white' : '' }}">
+                            <div class="dark:bg-gray-800 px-3 {{ $previewMode == 1 ? 'rounded-2xl pt-2 border-red-400 bg-white' : '' }}">
                                 <div class="flex flex-col md:flex-row gap-0 md:gap-2 my-2 items-center">
                                     <x-input-label labelfor="client interested to receive screening"
                                         labelvalue="Is client interested and ready to receive cervical cancer screening?"

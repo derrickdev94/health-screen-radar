@@ -13,13 +13,13 @@
                 CERVICAL CANCER SCREENING
             </a>
 
-            <div class="p-20 rounded-md bg-gray-100 outline-2 outline-gray-300 shadow-md"></div>
-            <div class="p-20 rounded-md bg-gray-100 outline-2 outline-gray-300 shadow-md"></div>
-            <div class="p-20 rounded-md bg-gray-100 outline-2 outline-gray-300 shadow-md"></div>
-            <div class="p-20 rounded-md bg-gray-100 outline-2 outline-gray-300 shadow-md"></div>
-            <div class="p-20 rounded-md bg-gray-100 outline-2 outline-gray-300 shadow-md"></div>
-            <div class="p-20 rounded-md bg-gray-100 outline-2 outline-gray-300 shadow-md"></div>
-            <div class="p-20 rounded-md bg-gray-100 outline-2 outline-gray-300 shadow-md"></div>
+            <div class="p-20 rounded-md bg-gray-100 dark:bg-gray-800 outline-2 outline-gray-300 shadow-md"></div>
+            <div class="p-20 rounded-md bg-gray-100 dark:bg-gray-800 outline-2 outline-gray-300 shadow-md"></div>
+            <div class="p-20 rounded-md bg-gray-100 dark:bg-gray-800 outline-2 outline-gray-300 shadow-md"></div>
+            <div class="p-20 rounded-md bg-gray-100 dark:bg-gray-800 outline-2 outline-gray-300 shadow-md"></div>
+            <div class="p-20 rounded-md bg-gray-100 dark:bg-gray-800 outline-2 outline-gray-300 shadow-md"></div>
+            <div class="p-20 rounded-md bg-gray-100 dark:bg-gray-800 outline-2 outline-gray-300 shadow-md"></div>
+            <div class="p-20 rounded-md bg-gray-100 dark:bg-gray-800 outline-2 outline-gray-300 shadow-md"></div>
         </div>
     </div>
 

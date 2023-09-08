@@ -4,7 +4,7 @@
             client address
         </div>
     </x-slot>
-    <div class="container">
+    <div class="container p-2">
         <livewire:client-address-table />
     </div>
 </x-content-layout>

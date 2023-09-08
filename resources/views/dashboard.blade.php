@@ -6,7 +6,7 @@
             @endif
         </div>
     </x-slot>
-    <div class="bg-white">
+    <div class="bg-white dark:bg-gray-900">
         {{ $slot }}
     </div>
 

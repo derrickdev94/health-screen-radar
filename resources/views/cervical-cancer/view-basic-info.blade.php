@@ -4,7 +4,7 @@
             client cervical cancer basic info
         </div>
     </x-slot>
-    <div class="container">
+    <div class="container p-2">
         <livewire:basic-info-table />
     </div>
 </x-content-layout>

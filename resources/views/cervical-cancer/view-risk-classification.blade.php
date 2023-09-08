@@ -4,7 +4,7 @@
             Client Cervical Cancer Risk Classification
         </div>
     </x-slot>
-    <div class="container">
+    <div class="container p-2">
         <livewire:risk-classification-table />
     </div>
 </x-content-layout>
