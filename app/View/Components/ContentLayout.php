@@ -6,13 +6,13 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class content_layout extends Component
+class ContentLayout extends Component
 {
     public function __construct(){}
 
 
     public function render(): View|Closure|string
     {
-        return view('components.content_layout');
+        return view('components.content-layout');
     }
 }

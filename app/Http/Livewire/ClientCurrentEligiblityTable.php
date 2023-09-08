@@ -35,6 +35,8 @@ class ClientCurrentEligiblityTable extends DataTableComponent
             Column::make("ID", "id")
             ->sortable()
             ->hideIf(true),
+            Column::make("Client Id",)
+            ->hideIf(true),
             Column::make("Client Name","client.client_name")
             ->sortable()
             ->searchable(),
@@ -56,7 +58,7 @@ class ClientCurrentEligiblityTable extends DataTableComponent
             ->buttons([
                 LinkColumn::make('View')
                 ->title(fn($row)=> 'View')
-                ->location(fn($row)=> route('cervicalCancer.index'))
+                ->location(fn($row)=> route('cervicalCancer.create',[$row->client_id,'current_form','view']))
 
                 ->attributes(function($row){
                     return [
@@ -65,7 +67,7 @@ class ClientCurrentEligiblityTable extends DataTableComponent
                 }),
                 LinkColumn::make('Edit')
                 ->title(fn($row)=> 'Edit')
-                ->location(fn($row)=> route('cervicalCancer.index'))
+                ->location(fn($row)=> route('cervicalCancer.create',[$row->client_id,'current_form','edit']))
                 ->attributes(function($row){
                     return [
                         'class' =>'underline text-blue-500 hover:no-underline'

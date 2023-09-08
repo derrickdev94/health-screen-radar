@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CervicalCancerController;
+use App\Http\Livewire\NewCervicalScreening;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +29,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    Route::get('/cervical-cancer/create/{client_id?}/{form_name?}/{form_state?}', NewCervicalScreening::class)->name('cervicalCancer.create');
     Route::controller(CervicalCancerController::class)->group( function(){
         Route::get('/cervical-cancer','index')->name('cervicalCancer.index');
-        Route::get('/cervical-cancer/create', 'create')->name('cervicalCancer.create');
+
         Route::get('/cervical-cancer/basic-info','showBasicInfo')->name('cervicalCancer.basicInfo');
         Route::get('/cervical-cancer/clients-bio','showClient')->name('cervicalCancer.clientInfo');
         Route::get('/cervical-cancer/client-addresses','showClientAddress')->name('cervicalCancer.clientAddress');

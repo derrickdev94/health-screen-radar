@@ -19,21 +19,21 @@
                         </x-responsive-nav-link>
                     </li>
                     <li class="my-2">
-                        <x-responsive-nav-link :href="route('cervicalCancer.basicInfo')"
-                            :active="request()->routeIs('cervicalCancer.basicInfo')">
-                            {{ __('View Basic Info') }}
-                        </x-responsive-nav-link>
-                    </li>
-                    <li class="my-2">
                         <x-responsive-nav-link :href="route('cervicalCancer.clientInfo')"
                             :active="request()->routeIs('cervicalCancer.clientInfo')">
                             {{ __('View Client Info') }}
                         </x-responsive-nav-link>
                     </li>
                     <li class="my-2">
+                        <x-responsive-nav-link :href="route('cervicalCancer.basicInfo')"
+                            :active="request()->routeIs('cervicalCancer.basicInfo')">
+                            {{ __('View Basic Info') }}
+                        </x-responsive-nav-link>
+                    </li>
+                    <li class="my-2">
                         <x-responsive-nav-link :href="route('cervicalCancer.clientAddress')"
                             :active="request()->routeIs('cervicalCancer.clientAddress')">
-                            {{ __('Viw Client Address') }}
+                            {{ __('View Client Address') }}
                         </x-responsive-nav-link>
                     </li>
                     <li class="my-2">

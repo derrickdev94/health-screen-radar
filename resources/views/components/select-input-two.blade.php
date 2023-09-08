@@ -1,8 +1,7 @@
 @props([
     'disabled' => false,
-    'dependant'=>'',
     'name',
-    'options'=>[[1,"Yes",'Yes'],[0,"No",'No']],
+    'options'=>['Yes','No'],
     'previewmode'=>0,
     'required'=>false
 ])
@@ -20,16 +19,17 @@
 @if ($inPreview)
     <input type="hidden" wire:model={{ str_replace(' ','_',$name)}} id={{ 'hidden-'.str_replace(' ','-',$name)}} />
 @endif
-<select wire:model={{ str_replace(' ','_',$name)}} id={{ str_replace(' ','-',$name)}} name={{ str_replace(' ','_',$name)}}
+<select  wire:model={{ str_replace(' ','_',$name)}} id={{ str_replace(' ','-',$name)}} name={{ str_replace(' ','_',$name)}}
     @required($required==true) @disabled($previewmode==1)
     {!! $attributes->class([
         'w-full dark:bg-gray-900 dark:text-gray-300 mt-1 block',
         'border-gray-300 py-1 dark:border-gray-700 rounded-md shadow-sm focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600'=>$noPreview,
         'rounded-sm bg-gray-50 py-1 my-0 outline-none border-0 focus:ring-0'=>$inPreview,
     ])!!}>
-    <option selected disabled>make a selection ...</option>
-    @foreach ($options as $option )
-        <option value="{{$option[1]}}">{{str_replace('_',' ',$option[1])}}</option>
+    <option value="" selected disabled>make a selection ...</option>
+
+    @foreach ($options as $key=>$value )
+        <option @selected(old(str_replace(' ','_',$name))== $key)  value="{{str_replace('_',' ',$key)}}">{{str_replace('_',' ',$key)}}</option>
     @endforeach
 </select>
 

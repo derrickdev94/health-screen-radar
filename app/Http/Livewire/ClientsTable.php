@@ -75,7 +75,7 @@ class ClientsTable extends DataTableComponent
             ->buttons([
                 LinkColumn::make('View')
                 ->title(fn($row)=> 'View')
-                ->location(fn($row)=> route('cervicalCancer.create',$row->id))
+                ->location(fn($row)=> route('cervicalCancer.create',[$row->id,'bio_form','view']))
                 ->attributes(function($row){
                     return [
                         'class' =>'underline text-blue-500 hover:no-underline'
@@ -83,7 +83,7 @@ class ClientsTable extends DataTableComponent
                 }),
                 LinkColumn::make('Edit')
                 ->title(fn($row)=> 'Edit'.$row->name)
-                ->location(fn($row)=> route('cervicalCancer.index'))
+                ->location(fn($row)=> route('cervicalCancer.create',[$row->id,'bio_form','edit']))
                 ->attributes(function($row){
                     return [
                         'class' =>'underline text-blue-500 hover:no-underline'
