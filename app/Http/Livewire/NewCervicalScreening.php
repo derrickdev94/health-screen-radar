@@ -30,7 +30,7 @@ class NewCervicalScreening extends Component
     private $notReferredReason = ['Eligible', 'Ineligible', 'Not willing/Not interested', 'No referral option'];
     private $riskHivStatus = [[1, 'Positive', 'Positive'], [0, 'Negative', 'Negative'], [0, 'Unsure', 'Unsure']];
     private $populationCat = ['FSW', 'WWUID', 'AGYW', 'Others'];
-    private $genderAtBirth  = ["Male", "Female"];
+    public $genderAtBirth  = ["Male", "Female"];
     //SELECTION OPTIONS FOR RISK CLASSIFICATION
     private $advanced_illness_symptoms = array(
         'difficulty or painful bowel movements or urination',
@@ -645,7 +645,7 @@ class NewCervicalScreening extends Component
             "parents_with_cancer" => $parentsWithCancer,
             "trueOrFalse" => $this->trueOrFalse,
             "sex" => $sex,
-            "gender_at_birth" => $this->genderAtBirth,
+            "gender_at_birth" => $sex,
             "age" => $age,
             "populationCat" => $this->populationCat,
             "lastMenstruation" => $lastMenstruation,

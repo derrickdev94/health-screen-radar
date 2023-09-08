@@ -158,7 +158,7 @@
                                     <x-input-label labelfor="gender" labelvalue="gender" class="w-full md:w-3/12" />
                                     <div class="flex flex-col w-full">
                                         <x-select-input :previewmode="$previewMode" name="gender"
-                                            :options="$gender_at_birth" />
+                                            :options="$genderAtBirth" />
                                         @error('gender')
                                         <x-input-single-error :message="$message" />
                                         @enderror
@@ -227,7 +227,7 @@
                                     <x-input-label labelfor="subcounty" labelvalue="subcounty"
                                         class="w-full md:w-3/12" />
                                     <div class="flex flex-col w-full">
-                                        <x-input-group :previewmode="$previewMode" name="subcounty" />
+                                        <x-text-input :previewmode="$previewMode" name="subcounty" />
                                         @error('subcounty')
                                         <x-input-single-error :message="$message" />
                                         @enderror
@@ -237,7 +237,7 @@
                                 <div class="flex flex-col md:flex-row gap-0 md:gap-2 my-2 items-center">
                                     <x-input-label labelfor="parish" labelvalue="parish" class="w-full md:w-3/12" />
                                     <div class="flex flex-col w-full">
-                                        <x-input-group :previewmode="$previewMode" name="parish" />
+                                        <x-text-input :previewmode="$previewMode" name="parish" />
                                         @error('parish')
                                         <x-input-single-error :message="$message" />
                                         @enderror
@@ -247,7 +247,7 @@
                                 <div class="flex flex-col md:flex-row gap-0 md:gap-2 my-2 items-center">
                                     <x-input-label labelfor="village" labelvalue="village" class="w-full md:w-3/12" />
                                     <div class="flex flex-col w-full">
-                                        <x-input-group :previewmode="$previewMode" name="village" />
+                                        <x-text-input :previewmode="$previewMode" name="village" />
                                         @error('village')
                                         <x-input-single-error :message="$message" />
                                         @enderror
@@ -257,7 +257,7 @@
                                 <div class="flex flex-col md:flex-row gap-0 md:gap-2 my-2 mb-0 items-center">
                                     <x-input-label labelfor="zone" labelvalue="zone" class="w-full md:w-3/12" />
                                     <div class="flex flex-col w-full">
-                                        <x-input-group :previewmode="$previewMode" name="zone" />
+                                        <x-text-input :previewmode="$previewMode" name="zone" />
                                         @error('zone')
                                         <x-input-single-error :message="$message" />
                                         @enderror
