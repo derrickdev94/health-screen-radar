@@ -36,12 +36,12 @@
             @if(isset($side_panel))
             <div class="h-screen hidden md:block
                 fixed left-0 top-0 bottom-0
-                w-[23%] overscroll-contain dark:bg-gray-900">
+                w-[23%] overscroll-contain bg-gray-200 dark:bg-gray-900">
 
-                <div class="flex shrink-0 justify-center items-center bg-white dark:bg-gray-900">
+                <div class="flex shrink-0 justify-center items-center py-2 bg-white dark:bg-gray-800">
                     <a href="{{ route('homepage') }}">
                         <x-application-logo
-                            class="block h-[106px] w-24 fill-current  text-gray-800 dark:text-gray-200" />
+                            class="block h-[92px] w-24 rounded-full fill-current  text-gray-800 dark:text-gray-200" />
                     </a>
                 </div>
 
@@ -89,10 +89,10 @@
                 <div class="sticky top-0 z-10">
                     <div class="flex flex-wrap">
                         <!-- Extra logo -->
-                        <div class="flex items-center pl-6 bg-white dark:bg-gray-900 justify-center">
+                        <div class="flex items-center pl-6 py-2 bg-white dark:bg-gray-800 shadow-md justify-center">
                             <a href="{{ route('homepage') }}">
                                 <x-application-logo
-                                    class="block h-[106px] w-24 fill-current text-gray-800 dark:text-gray-200" />
+                                    class="block h-[92px] w-24 rounded-full fill-current text-gray-800 dark:text-gray-200" />
                             </a>
                         </div>
                         <div class="flex flex-col grow">
